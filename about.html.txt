@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Credence Media Group</title>
+    <meta name="description" content="Founder-led and media-backed. Learn why Credence Media Group is the premier choice for Authority Positioning.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">CREDENCE<span>MEDIA</span></a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="framework.html">The Framework</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" class="btn btn-primary">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Mission</h1>
+            <p>To democratize authority for those who truly deserve it.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container text-block-center">
+            <h2>The Vision</h2>
+            <p>We are entering a new era of the internet. The "Information Age" is over; the "Authority Age" has begun. With AI generating infinite content, trust has become the scarcest commodity.</p>
+            <p>Credence Media Group was founded on a simple premise: <strong>Expertise without visibility is a tragedy.</strong></p>
+            <p>We bridge the gap between your actual accomplishments and your digital reputation, ensuring that when potential clients, investors, or partners search for you, they find a leader.</p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>Why Credence Media Group?</h2>
+                    <ul class="feature-list">
+                        <li><strong>Founder-Led Strategy:</strong> We aren't just account managers. We are strategists who understand business equity.</li>
+                        <li><strong>Media-Backed:</strong> We own our relationships with publishers, bypassing the middleman pitch process.</li>
+                        <li><strong>Future-Proof:</strong> We don't just optimize for Google today; we optimize for the AI agents of tomorrow.</li>
+                    </ul>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>500+</h3>
+                        <p>Articles Published</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>$50M+</h3>
+                        <p>Client Revenue Impact</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>4</h3>
+                        <p>Continents Served</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join the ranks of recognized authorities.</h2>
+            <a href="contact.html" class="btn btn-white">Apply Now</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Credence Media Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
