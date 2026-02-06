@@ -247,22 +247,24 @@ input:focus, textarea:focus { border-color: var(--accent); }
 /* ==========================================================================
    SOCIAL ICONS (FOOTER)
    ========================================================================== */
+/* SOCIAL ROW (Container) */
 .social-row {
     display: flex;
-    gap: 1.2rem;          /* Space between icons */
-    margin-top: 1.5rem;   /* Space above the row */
+    gap: 15px;            /* Space between icons */
+    margin-top: 1.5rem;
     align-items: center;
 }
 
+/* SOCIAL ICON (SVG Style) */
 .social-icon {
-    width: 20px;          /* Elegant size */
-    height: 20px;
-    fill: #64748b;        /* Muted Grey (Matches footer text) */
+    width: 24px !important;   /* Force Small Size */
+    height: 24px !important;  /* Force Small Size */
+    fill: #64748b;            /* Grey Color */
     transition: all 0.3s ease;
 }
 
-/* Hover Effect: Turns Brand Blue and floats up */
+/* Hover Effect */
 .social-row a:hover .social-icon {
-    fill: var(--accent);  /* Uses your Site's Blue Accent */
-    transform: translateY(-3px);
+    fill: #2563eb;            /* Change to Blue on Hover */
+    transform: translateY(-3px); /* Float Up */
 }
