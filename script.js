@@ -1,78 +1,49 @@
+/* ==========================================================================
+   INSTRUCTIONS FOR CUSTOMIZATION
+   ==========================================================================
+   1. Images: Look for comments in HTML saying [INSTRUCTION]. 
+      Replace the src="..." with your file path (e.g., assets/logo.png).
+   
+   2. Contact Form: 
+      - Go to https://formspree.io
+      - Create a free account and a new form.
+      - Copy the "Endpoint" URL they give you.
+      - Paste it into the <form action="..."> in index.html.
+
+   3. Sliders: 
+      - To add more awards/reviews, just duplicate the <div class="slide-item"> lines in HTML.
+   ========================================================================== */
+
 document.addEventListener('DOMContentLoaded', () => {
-    
-    /* ------------------------------------------------
-       1. MOBILE MENU TOGGLE
-    ------------------------------------------------ */
-    // Define toggle function globally so onclick="" works in HTML
+
+    /* --- 1. Mobile Menu Toggle --- */
     window.toggleMenu = function() {
-        const menu = document.getElementById('mobileMenu');
-        const toggleBtn = document.querySelector('.mobile-toggle');
-        
-        // Toggle Active Classes
-        menu.classList.toggle('active');
-        
-        // Optional: Animate the hamburger icon if you add CSS for it
-        toggleBtn.classList.toggle('open');
-        
-        // Prevent background scrolling when menu is open
-        if (menu.classList.contains('active')) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
+        document.getElementById('mobileMenu').classList.toggle('active');
+        document.body.style.overflow = 
+            document.body.style.overflow === 'hidden' ? 'auto' : 'hidden';
     };
 
-    // Close menu automatically when a link is clicked
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('mobileMenu').classList.remove('active');
-            document.body.style.overflow = 'auto';
+    /* --- 2. FAQ Accordion Logic --- */
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            // Close others if you want only one open at a time (Optional)
+            // faqItems.forEach(i => { if(i !== item) i.classList.remove('active'); });
+            
+            item.classList.toggle('active');
         });
     });
 
-    /* ------------------------------------------------
-       2. SCROLL REVEAL ANIMATIONS (Auto-Detect)
-    ------------------------------------------------ */
-    const observerOptions = {
-        threshold: 0.15, // Trigger when 15% of the element is visible
-        rootMargin: "0px"
-    };
-
+    /* --- 3. Scroll Reveal Animation --- */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Stop watching once revealed
+                entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    // Automatically select elements to animate
-    const elementsToAnimate = document.querySelectorAll('.hero-content, .section h2, .card, .footer-col, .grid-4 div');
-    
-    elementsToAnimate.forEach((el, index) => {
-        el.classList.add('fade-up'); // Add base CSS class
-        
-        // Add a slight stagger delay for grid items
-        if(index % 3 === 0) el.style.transitionDelay = '0s';
-        if(index % 3 === 1) el.style.transitionDelay = '0.1s';
-        if(index % 3 === 2) el.style.transitionDelay = '0.2s';
-        
-        observer.observe(el);
-    });
-
-    /* ------------------------------------------------
-       3. STICKY HEADER SHADOW
-    ------------------------------------------------ */
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.4)";
-            navbar.style.background = "rgba(5, 5, 5, 0.95)";
-        } else {
-            navbar.style.boxShadow = "none";
-            navbar.style.background = "rgba(5, 5, 5, 0.9)";
-        }
-    });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
 });
