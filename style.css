@@ -1,17 +1,23 @@
-/* 1. RESET & VARIABLES */
+/* ==========================================================================
+   1. THEME VARIABLES & RESET (PREMIUM WHITE)
+   ========================================================================== */
 :root {
-    --bg-main: #050505;       /* Pure Black */
-    --bg-card: #121212;       /* Dark Grey for cards */
-    --text-main: #ffffff;     /* White text */
-    --text-muted: #a1a1aa;    /* Silver text */
-    --accent: #3b82f6;        /* Electric Blue (Trust & Tech) */
-    --border: #27272a;        /* Subtle borders */
+    /* [INSTRUCTION] Change these colors to match your brand exactly */
+    --bg-main: #ffffff;           /* Pure White Background */
+    --bg-alt: #f8fafc;            /* Very Light Grey for alternating sections */
+    --bg-card: #ffffff;           /* White cards */
+    
+    --text-main: #0f172a;         /* Deep Navy (Almost Black) for Headings */
+    --text-muted: #475569;        /* Slate Grey for paragraphs */
+    
+    --accent: #2563eb;            /* Professional Blue (Trust) */
+    --border: #e2e8f0;            /* Subtle Light Grey Borders */
     
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
     
     --max-width: 1200px;
-    --header-height: 80px;    /* Reserved space for sticky header */
+    --header-height: 80px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
@@ -22,146 +28,157 @@ body {
     color: var(--text-main);
     font-family: var(--font-body);
     line-height: 1.7;
-    overflow-x: hidden; /* Prevents horizontal scroll broken layout */
-    padding-top: var(--header-height); /* FIX: Prevents header overlapping content */
+    padding-top: var(--header-height);
 }
 
 a { text-decoration: none; color: inherit; transition: 0.3s; }
 ul { list-style: none; }
-img { max-width: 100%; display: block; border-radius: 0 !important; }
 
-/* 2. TYPOGRAPHY (Premium Size) */
+/* [INSTRUCTION] Global Image Style - Ensures images fit containers */
+img { max-width: 100%; display: block; height: auto; }
+
+/* ==========================================================================
+   2. TYPOGRAPHY
+   ========================================================================== */
 h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--text-main); font-weight: 700; }
-h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
+h1 { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
 h2 { font-size: clamp(2rem, 3vw, 3rem); margin-bottom: 1rem; }
-h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-main); }
-p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
 
-.text-highlight { color: var(--accent); }
 .text-center { text-align: center; }
+.section-title { max-width: 800px; margin: 0 auto 4rem auto; text-align: center; }
 
-/* 3. UTILITIES */
+/* ==========================================================================
+   3. COMPONENTS (Buttons, Grid, Navbar)
+   ========================================================================== */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
 .section { padding: 6rem 0; border-bottom: 1px solid var(--border); }
-.bg-dark { background: var(--bg-card); }
+.bg-alt { background-color: var(--bg-alt); }
 
-/* GRID SYSTEM (Responsive Fix) */
-.grid-2, .grid-3, .grid-4 {
-    display: grid;
-    gap: 2rem;
-}
-/* Desktop: 2 columns */
-@media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
-/* Desktop: 3 columns */
-@media (min-width: 900px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
-/* Desktop: 4 columns */
-@media (min-width: 1024px) { .grid-4 { grid-template-columns: repeat(4, 1fr); } }
-
-/* 4. HEADER (Sticky & Glassy) */
-.navbar {
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    height: var(--header-height);
-    background: rgba(5, 5, 5, 0.9); /* Dark Glass */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-}
-.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; letter-spacing: -1px; }
-
-/* Desktop Menu */
-.nav-links { display: none; gap: 2rem; }
-@media (min-width: 900px) { .nav-links { display: flex; } }
-.nav-links a { font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-.nav-links a:hover { color: var(--accent); }
-
-/* Mobile Menu Button */
-.mobile-toggle { display: block; background: none; border: none; cursor: pointer; color: white; }
-@media (min-width: 900px) { .mobile-toggle { display: none; } }
-.mobile-toggle span { display: block; width: 25px; height: 2px; background: white; margin: 6px 0; }
-
-/* Mobile Menu Overlay */
-.mobile-menu {
-    position: fixed; top: var(--header-height); left: 0; width: 100%; height: 0;
-    background: var(--bg-main); overflow: hidden; transition: 0.4s; z-index: 999;
-}
-.mobile-menu.active { height: 100vh; padding: 2rem; border-top: 1px solid var(--border); }
-.mobile-menu a { display: block; font-size: 1.5rem; margin-bottom: 1.5rem; font-family: var(--font-heading); }
-
-/* 5. BUTTONS */
+/* Buttons */
 .btn {
     display: inline-block; padding: 1rem 2.5rem; font-weight: 600;
     text-transform: uppercase; letter-spacing: 1px; cursor: pointer;
-    border: 1px solid var(--accent); background: transparent; color: var(--accent);
-    transition: 0.3s;
+    border: 1px solid var(--text-main); background: transparent; color: var(--text-main);
+    transition: 0.3s; font-size: 0.85rem;
 }
-.btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
-.btn-primary:hover { background: transparent; color: var(--accent); }
-.btn-outline:hover { background: var(--accent); color: white; }
+.btn-primary { background: var(--text-main); color: white; border-color: var(--text-main); }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+.btn-outline:hover { background: var(--text-main); color: white; }
+.btn-center { display: block; width: fit-content; margin: 3rem auto 0; }
 
-/* 6. HERO */
-.hero { padding: 4rem 0 8rem; position: relative; overflow: hidden; }
-.hero-content { position: relative; z-index: 2; max-width: 800px; }
-.hero-bg {
-    position: absolute; top: 0; right: 0; width: 50%; height: 100%;
-    background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(0,0,0,0) 70%);
-    z-index: 1; pointer-events: none;
+/* Navigation */
+.navbar {
+    position: fixed; top: 0; left: 0; width: 100%; height: var(--header-height);
+    background: rgba(255, 255, 255, 0.95); /* White Glass */
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+    z-index: 1000; display: flex; align-items: center;
 }
+.nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.logo { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; color: var(--text-main); }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; color: var(--text-muted); }
+.nav-links a:hover { color: var(--text-main); }
 
-/* 7. CARDS (Strategy/Services) */
+/* Mobile Menu */
+.mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
+.mobile-toggle span { display: block; width: 25px; height: 2px; background: var(--text-main); margin: 6px 0; }
+@media (max-width: 900px) { .nav-links { display: none; } .mobile-toggle { display: block; } }
+
+/* Mobile Overlay */
+.mobile-menu {
+    position: fixed; top: var(--header-height); left: 0; width: 100%; height: 0;
+    background: white; overflow: hidden; transition: 0.4s; z-index: 999;
+    display: flex; flex-direction: column; padding: 0 2rem;
+}
+.mobile-menu.active { height: 100vh; padding-top: 2rem; }
+.mobile-menu a { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 1.5rem; }
+
+/* ==========================================================================
+   4. SECTION SPECIFIC STYLES
+   ========================================================================== */
+
+/* Hero */
+.hero { padding: 4rem 0 6rem; background: var(--bg-main); }
+.hero-content { max-width: 900px; margin: 0 auto; text-align: left; }
+
+/* Trinity Cards (No Numbers) */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    padding: 2.5rem;
-    transition: 0.3s;
+    background: var(--bg-card); border: 1px solid var(--border); padding: 2.5rem;
+    transition: 0.3s; height: 100%;
 }
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.card-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1.5rem; }
+.card:hover { border-color: var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.05); transform: translateY(-5px); }
+.card h3 { margin-top: 0; }
 
-/* 8. INFINITE SLIDER */
-.slider-container { background: var(--border); padding: 1rem 0; overflow: hidden; }
-.slider-track { display: flex; width: calc(200px * 10); animation: scroll 20s linear infinite; }
-.slide { width: 200px; padding: 0 2rem; display: flex; align-items: center; justify-content: center; }
-.slide span { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 700; color: var(--text-muted); opacity: 0.6; }
-@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-200px * 5)); } }
+/* Publications List (Categorized) */
+.pub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.pub-item {
+    border: 1px solid var(--border); padding: 1.5rem; text-align: center;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 150px;
+}
+.pub-category {
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;
+    background: var(--bg-alt); padding: 4px 8px; margin-bottom: 1rem; border-radius: 4px;
+}
+.pub-logo-placeholder { font-weight: 700; color: #cbd5e1; font-size: 1.2rem; }
 
-/* 9. FOOTER */
-.footer { padding: 5rem 0 2rem; border-top: 1px solid var(--border); font-size: 0.9rem; }
-.footer-col h4 { color: white; margin-bottom: 1.5rem; font-size: 1.1rem; }
-.footer-col ul li { margin-bottom: 0.8rem; }
-.footer-col a { color: var(--text-muted); }
-.footer-col a:hover { color: var(--accent); padding-left: 5px; }
-.footer-bottom { border-top: 1px solid var(--border); margin-top: 4rem; padding-top: 2rem; text-align: center; color: var(--text-muted); }
+/* Infinite Sliders (Awards, Reviews) */
+.slider-wrap { overflow: hidden; white-space: nowrap; position: relative; padding: 2rem 0; }
+.slider-track { display: inline-block; animation: scroll 30s linear infinite; }
+.slide-item {
+    display: inline-block; width: 250px; margin-right: 3rem; vertical-align: middle;
+    background: var(--bg-alt); padding: 1.5rem; border: 1px solid var(--border);
+    white-space: normal; /* Allows text wrapping inside card */
+}
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* 10. FORM */
+/* Gallery (Our Work) */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+.gallery-item { position: relative; overflow: hidden; height: 300px; border: 1px solid var(--border); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95);
+    padding: 1.5rem; transform: translateY(100%); transition: 0.3s;
+}
+.gallery-item:hover .gallery-overlay { transform: translateY(0); }
+
+/* Why Choose Us (Text Blocks) */
+.why-grid { display: grid; gap: 3rem; }
+@media(min-width: 768px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+.why-text h4 { color: var(--accent); margin-bottom: 0.5rem; }
+
+/* FAQ Accordion */
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+    padding: 1.5rem 0; cursor: pointer; display: flex; justify-content: space-between;
+    font-weight: 600; font-family: var(--font-heading); font-size: 1.2rem;
+}
+.faq-answer { max-height: 0; overflow: hidden; transition: 0.3s ease-out; }
+.faq-answer p { padding-bottom: 1.5rem; margin: 0; }
+.faq-icon { transition: 0.3s; }
+.faq-item.active .faq-answer { max-height: 200px; }
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+/* Footer */
+.footer { background: var(--bg-alt); border-top: 1px solid var(--border); font-size: 0.9rem; padding: 5rem 0 2rem; }
+.footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+.footer h4 { font-size: 1rem; margin-bottom: 1.5rem; }
+.footer a { display: block; margin-bottom: 0.8rem; color: var(--text-muted); }
+.footer a:hover { color: var(--accent); }
+.footer-bottom { border-top: 1px solid #cbd5e1; padding-top: 2rem; text-align: center; color: var(--text-muted); }
+
+/* Form */
 input, textarea, select {
     width: 100%; padding: 1rem; margin-bottom: 1.5rem;
-    background: var(--bg-card); border: 1px solid var(--border);
-    color: white; font-family: inherit;
+    background: white; border: 1px solid var(--border);
+    font-family: inherit; transition: 0.3s;
 }
 input:focus, textarea:focus { border-color: var(--accent); }
 
-
-/* --- ADD TO BOTTOM OF STYLE.CSS --- */
-
-/* Animation Base State (Hidden) */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Animation Active State (Visible) */
-.fade-up.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Mobile Menu Animation Fix */
-.mobile-menu {
-    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+/* Animations */
+.fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
