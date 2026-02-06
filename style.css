@@ -182,3 +182,64 @@ input:focus, textarea:focus { border-color: var(--accent); }
 /* Animations */
 .fade-up { opacity: 0; transform: translateY(30px); transition: 0.8s; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================================
+   INFINITE LOGO SLIDER
+   ========================================================================== */
+.logo-slider-section {
+    background: #f8fafc; /* Very light grey background */
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.slider-label {
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #94a3b8; /* Muted text color */
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.logo-slider-track {
+    display: flex;
+    align-items: center;
+    width: calc(200px * 12); /* Width = (Slide Width * Number of Slides) */
+    animation: infiniteScroll 25s linear infinite;
+}
+
+.logo-slide {
+    width: 200px; /* Fixed width for each logo container */
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-slide img {
+    max-height: 40px; /* Constrain height */
+    width: auto;
+    opacity: 0.6; /* Slight transparency for "passive" look */
+    filter: grayscale(100%); /* Make logos black & white */
+    transition: 0.3s;
+}
+
+/* Hover Effect: Bring color back on hover (Optional) */
+.logo-slide img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+@keyframes infiniteScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-200px * 6)); } /* Move by half the total width */
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .logo-slider-track {
+        animation-duration: 15s; /* Faster on mobile */
+    }
+}
