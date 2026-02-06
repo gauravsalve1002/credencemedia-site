@@ -3,283 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credence | Guaranteed Authority Positioning</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png"> <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
+    <title>Credence | Authority Engineering for AI Era</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar" id="mainNav">
+    <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">Credence</a>
-
+            <a href="#" class="logo">Credence.</a>
+            
             <ul class="nav-links">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="#work">Case Study</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#framework">Strategy</a></li>
+                <li><a href="#work">Case Studies</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
-                <li><a href="#why-us">Why Us</a></li>
             </ul>
 
-            <a href="#contact" class="btn btn-primary nav-btn">Contact Us</a>
-
-            <button class="mobile-toggle" aria-label="Menu">
+            <a href="#contact" class="btn btn-primary" style="display:none; @media(min-width:900px){display:inline-block;}">Contact</a>
+            
+            <button class="mobile-toggle" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="hero-bg-animation"></div> <div class="container hero-content reveal">
-            <h1>Guaranteed Media <br><span class="highlight-gold">Placement</span></h1>
-            
-            <p class="hero-sub">
-                We engineer authority for the AI Era. Dominating 
-                <span class="typewriter" data-words='["Search Engine Results.", "Answer Engine Optimization.", "Generative AI Responses."]'></span>
-            </p>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="toggleMenu()">About</a>
+        <a href="#framework" onclick="toggleMenu()">Strategy</a>
+        <a href="#work" onclick="toggleMenu()">Case Studies</a>
+        <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
 
-            <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">Start Your Campaign</a>
-                <a href="#strategy" class="btn btn-outline">Explore The Framework</a>
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1>Guaranteed Authority in the <span class="text-highlight">Age of AI.</span></h1>
+            <p>We don't just "do PR." We engineer your digital entity so that Google ranks you #1, ChatGPT cites you as an expert, and investors trust you instantly.</p>
+            <p><strong>Guaranteed Placement. Zero Retainers. 100% Transparency.</strong></p>
+            <div style="margin-top: 2rem;">
+                <a href="#contact" class="btn btn-primary">Start Campaign</a>
+                <a href="#framework" class="btn btn-outline" style="margin-left: 1rem;">Our Process</a>
             </div>
         </div>
     </header>
 
-    <section class="section bg-white" id="strategy">
+    <div class="slider-container">
+        <div class="slider-track">
+            <div class="slide"><span>FORBES</span></div>
+            <div class="slide"><span>BLOOMBERG</span></div>
+            <div class="slide"><span>YAHOO!</span></div>
+            <div class="slide"><span>TECHCRUNCH</span></div>
+            <div class="slide"><span>REUTERS</span></div>
+            <div class="slide"><span>FORBES</span></div>
+            <div class="slide"><span>BLOOMBERG</span></div>
+            <div class="slide"><span>YAHOO!</span></div>
+            <div class="slide"><span>TECHCRUNCH</span></div>
+            <div class="slide"><span>REUTERS</span></div>
+        </div>
+    </div>
+
+    <section class="section" id="framework">
         <div class="container">
-            <div class="section-header text-center reveal">
-                <h2>The Authority Framework</h2>
-                <p>Modern reputation is not just about press. It is about how machines understand your entity.</p>
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 4rem;">
+                <h2>The Trinity of Modern Authority</h2>
+                <p>To dominate your market today, you cannot just rely on a website. You need to control the three pillars of information retrieval.</p>
             </div>
 
-            <div class="grid-3 strategy-grid">
-                <div class="strategy-card reveal delay-1">
+            <div class="grid-3">
+                <div class="card">
                     <div class="card-icon">01</div>
-                    <h3>SEO</h3>
-                    <p class="subtitle">Search Engine Optimization</p>
-                    <p class="desc">We secure high-authority backlinks from Tier-1 news outlets to force Google to rank your personal and brand name #1.</p>
+                    <h3>SEO (Search)</h3>
+                    <p><strong>For Google & Bing.</strong></p>
+                    <p>Traditional search is not dead, but it has changed. We secure high-authority backlinks from Tier-1 news outlets (Domain Authority 80+). This signals to Google that you are a trusted entity, forcing your website to rank #1 for your branded keywords and suppressing negative search results.</p>
                 </div>
 
-                <div class="strategy-card reveal delay-2">
+                <div class="card">
                     <div class="card-icon">02</div>
-                    <h3>AEO</h3>
-                    <p class="subtitle">Answer Engine Optimization</p>
-                    <p class="desc">We structure your data so voice assistants (Siri, Alexa) and snippet engines cite you as the definitive answer.</p>
+                    <h3>AEO (Answer)</h3>
+                    <p><strong>For Siri & Alexa.</strong></p>
+                    <p>Voice search requires a different structure. We format your brand data into "featured snippets" and structured schema. When a user asks "Who is the best AI consultant?", voice assistants read your name because we have positioned you as the definitive answer in the Knowledge Graph.</p>
                 </div>
 
-                <div class="strategy-card reveal delay-3">
+                <div class="card">
                     <div class="card-icon">03</div>
-                    <h3>GEO</h3>
-                    <p class="subtitle">Generative Engine Optimization</p>
-                    <p class="desc">The future. We feed your narrative into the training data of LLMs (ChatGPT, Gemini) so AI recommends you.</p>
+                    <h3>GEO (Generative)</h3>
+                    <p><strong>For ChatGPT & Gemini.</strong></p>
+                    <p>The future of search is chat. Large Language Models (LLMs) do not "search" the web live; they rely on training data. We feed your brand narrative into the datasets that train these models, ensuring that when AI "hallucinates," it hallucinates in your favor.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-navy text-white">
-        <div class="container text-center mb-2">
-            <p class="label-gold">Excellence Recognized</p>
-        </div>
-        <div class="slider-container">
-            <div class="slider-track">
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Award+1" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Clutch+Top+PR" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=MarTech+Winner" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Forbes+Council" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Global+Excellence" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Award+1" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Clutch+Top+PR" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=MarTech+Winner" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Forbes+Council" alt="Award"></div>
-                <div class="slide"><img src="https://placehold.co/200x100/0a192f/d4af37?text=Global+Excellence" alt="Award"></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="publications">
+    <section class="section bg-dark">
         <div class="container">
-            <div class="grid-2 align-center">
-                <div class="reveal">
-                    <h2>Where We Place You</h2>
-                    <p>We do not "pitch". We own the inventory. Guaranteed placement on the world's most trusted domains.</p>
-                    <ul class="check-list">
-                        <li>Guaranteed Indexing</li>
-                        <li>Do-Follow Backlinks</li>
-                        <li>Editorial Approval Control</li>
-                    </ul>
+            <h2>Our Core Capabilities</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Guaranteed Media Placement</h3>
+                    <p>We bypass the "pitching" process. We have pre-negotiated inventory with over 500+ major publications. We guarantee that your article will be published, indexed, and live within 14 days, or you get a full refund.</p>
                 </div>
-                <div class="logo-grid reveal">
-                    <div class="logo-box">Forbes</div>
-                    <div class="logo-box">Entrepreneur</div>
-                    <div class="logo-box">Bloomberg</div>
-                    <div class="logo-box">Business Insider</div>
-                    <div class="logo-box">Yahoo! Finance</div>
-                    <div class="logo-box">AP News</div>
+                <div>
+                    <h3>Knowledge Graph Engineering</h3>
+                    <p>We build and verify your Google Knowledge Panel. This is the "ID Card" of the internet. Without it, you are just a guest; with it, you are a recognized entity.</p>
+                </div>
+                <div>
+                    <h3>Executive Reputation Defense</h3>
+                    <p>Bad press happens. We push it down. By flooding the search results with high-authority positive content, we displace negative links to page 2 or 3, effectively deleting them from public view.</p>
+                </div>
+                <div>
+                    <h3>Wikipedia & Wiki-Data</h3>
+                    <p>For qualifying clients, we manage the complex process of Wikipedia page creation, adhering to their strict notability guidelines to ensure your page sticks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-light" id="work">
-        <div class="container">
-            <h2 class="text-center reveal">Selected Case Studies</h2>
-            <div class="grid-3 work-grid mt-3">
-                
-                <div class="case-card reveal">
-                    <div class="case-img">
-                        <img src="https://placehold.co/600x400/eeeeee/333333?text=Fintech+Growth" alt="Fintech Case Study">
-                    </div>
-                    <div class="case-content">
-                        <span class="tag">Fintech</span>
-                        <h3>From Stealth to Series B</h3>
-                        <p>How we built the founder's authority to secure a $20M valuation.</p>
-                        <a href="#" class="read-more">Read Analysis &rarr;</a>
-                    </div>
+    <section class="section">
+        <div class="container text-center">
+            <h2>Proven Impact</h2>
+            <div class="grid-4" style="margin-top: 3rem;">
+                <div>
+                    <h3 class="text-highlight">500+</h3>
+                    <p>Articles Published</p>
                 </div>
-
-                <div class="case-card reveal delay-1">
-                    <div class="case-img">
-                        <img src="https://placehold.co/600x400/eeeeee/333333?text=SaaS+Exit" alt="SaaS Case Study">
-                    </div>
-                    <div class="case-content">
-                        <span class="tag">SaaS</span>
-                        <h3>The $50M Exit Strategy</h3>
-                        <p>Positioning a faceless software brand as a market leader in 6 months.</p>
-                        <a href="#" class="read-more">Read Analysis &rarr;</a>
-                    </div>
+                <div>
+                    <h3 class="text-highlight">100%</h3>
+                    <p>Placement Rate</p>
                 </div>
-
-                <div class="case-card reveal delay-2">
-                    <div class="case-img">
-                        <img src="https://placehold.co/600x400/eeeeee/333333?text=Crisis+Mgmt" alt="Crisis Management">
-                    </div>
-                    <div class="case-content">
-                        <span class="tag">Reputation Defense</span>
-                        <h3>Crisis Nullification</h3>
-                        <p>Displacing negative news results with authoritative positive press.</p>
-                        <a href="#" class="read-more">Read Analysis &rarr;</a>
-                    </div>
+                <div>
+                    <h3 class="text-highlight">14 Days</h3>
+                    <p>Avg. Turnaround</p>
                 </div>
-
+                <div>
+                    <h3 class="text-highlight">$50M+</h3>
+                    <p>Client Valuation Added</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="why-us">
+    <section class="section bg-dark" id="contact">
         <div class="container">
             <div class="grid-2">
-                <div class="reveal">
-                    <h2>Why Credence?</h2>
-                    <p>The agency model is broken. We fixed it.</p>
+                <div>
+                    <h2>Ready to become the Authority?</h2>
+                    <p>We accept a limited number of partners per month to ensure quality. Please describe your goals in detail.</p>
+                    <p><strong>Email:</strong> hello@credencemedia.co</p>
+                    <p><strong>HQ:</strong> Pune, Maharashtra, India</p>
                 </div>
-                <div class="benefits-list reveal">
-                    <div class="benefit-item">
-                        <h4>1. Speed to Market</h4>
-                        <p>Traditional PR takes months. We publish in as little as 14 days.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>2. Performance Guarantee</h4>
-                        <p>If we don't deliver the placement, you get a full refund. No questions asked.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <h4>3. Strategic Alignment</h4>
-                        <p>We don't just get "press." We get press that converts to revenue and trust.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-navy text-white">
-        <div class="container">
-            <h2 class="text-center mb-3">Client Perspectives</h2>
-            <div class="grid-2 review-grid">
-                <div class="review-card reveal">
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">"I was skeptical about 'guaranteed' placement. Credence delivered exactly what they promised. My personal brand is now my biggest asset."</p>
-                    <p class="author"><strong>— Jonathan K.</strong>, CEO of Vertex AI</p>
-                </div>
-                <div class="review-card reveal delay-1">
-                    <div class="stars">★★★★★</div>
-                    <p class="quote">"The team understands the nuance of AEO. We aren't just ranking on Google anymore; we are showing up in ChatGPT answers."</p>
-                    <p class="author"><strong>— Sarah M.</strong>, Founder of HealthFlow</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="contact">
-        <div class="container text-center reveal">
-            <h2>Apply for Partnership</h2>
-            <p class="mb-3">We accept limited clients per month to ensure quality.</p>
-            
-            <form class="contact-form">
-                <div class="form-row">
+                <form>
                     <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Work Email" required>
-                </div>
-                <div class="form-row">
-                    <input type="text" placeholder="Company Website">
                     <select>
                         <option>Interested in Continuity Plan</option>
                         <option>Interested in Growth Plan</option>
                         <option>Interested in Dominance Plan</option>
                     </select>
-                </div>
-                <textarea placeholder="Tell us about your goals..." rows="5"></textarea>
-                <button type="submit" class="btn btn-primary full-width">Submit Application</button>
-            </form>
+                    <textarea rows="5" placeholder="Tell us about your brand goals..."></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="grid-4">
                 <div class="footer-col">
-                    <h3 class="footer-logo">Credence</h3>
-                    <p>The Authority Engineering firm for the AI age. We build the reputation that precedes you.</p>
-                    <div class="social-icons">
-                        <a href="#">LN</a>
-                        <a href="#">X</a>
-                        <a href="#">IG</a>
+                    <h4>Credence.</h4>
+                    <p>The Authority Engineering firm for the AI age.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#">LN</a> | <a href="#">X</a> | <a href="#">IG</a>
                     </div>
-                    <p class="address">
-                        Pune, Maharashtra, India<br>
-                        hello@credencemedia.co
-                    </p>
                 </div>
-
                 <div class="footer-col">
                     <h4>Company</h4>
-                    <a href="about.html">About Us</a>
-                    <a href="#why-us">Why Choose Us</a>
-                    <a href="#">Is Credence Worth It?</a>
-                    <a href="#">Careers</a>
-                    <a href="#contact">Contact & Support</a>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Why Choose Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Resources</h4>
-                    <a href="#publications">Publications</a>
-                    <a href="#">Services</a>
-                    <a href="#">Blogs</a>
-                    <a href="pricing.html">Pricing</a>
-                    <a href="#reviews">Reviews & Testimonials</a>
+                    <ul>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Cookies Policy</a>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2026 Credence Media Group. All rights reserved.</p>
             </div>
