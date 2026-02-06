@@ -143,3 +143,25 @@ input, textarea, select {
     color: white; font-family: inherit;
 }
 input:focus, textarea:focus { border-color: var(--accent); }
+
+
+/* --- ADD TO BOTTOM OF STYLE.CSS --- */
+
+/* Animation Base State (Hidden) */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animation Active State (Visible) */
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Animation Fix */
+.mobile-menu {
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
