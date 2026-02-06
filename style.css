@@ -243,3 +243,26 @@ input:focus, textarea:focus { border-color: var(--accent); }
         animation-duration: 15s; /* Faster on mobile */
     }
 }
+
+/* ==========================================================================
+   SOCIAL ICONS (FOOTER)
+   ========================================================================== */
+.social-row {
+    display: flex;
+    gap: 1.2rem;          /* Space between icons */
+    margin-top: 1.5rem;   /* Space above the row */
+    align-items: center;
+}
+
+.social-icon {
+    width: 20px;          /* Elegant size */
+    height: 20px;
+    fill: #64748b;        /* Muted Grey (Matches footer text) */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: Turns Brand Blue and floats up */
+.social-row a:hover .social-icon {
+    fill: var(--accent);  /* Uses your Site's Blue Accent */
+    transform: translateY(-3px);
+}
