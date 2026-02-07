@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Credence Media</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png"> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Credence.</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Our Work</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="reviews.html" style="color: var(--text-main);">Reviews</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <header class="hero">
+        <div class="container hero-content fade-up">
+            <h1>Unfiltered Feedback.</h1>
+            <p>We don't edit reviews. We don't hide them. See what founders, CEOs, and investors really think about working with us.</p>
+        </div>
+    </header>
+
+    <section class="section bg-alt">
+        <div class="container">
+            <div class="grid-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div class="card fade-up">
+                    <h3 style="margin-bottom: 0.5rem;">G2</h3>
+                    <p style="color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</p>
+                    <p>5.0/5 (Verified)</p>
+                </div>
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <h3 style="margin-bottom: 0.5rem;">Google</h3>
+                    <p style="color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</p>
+                    <p>4.9/5 (120 Reviews)</p>
+                </div>
+                <div class="card fade-up" style="transition-delay: 0.2s;">
+                    <h3 style="margin-bottom: 0.5rem;">Clutch</h3>
+                    <p style="color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</p>
+                    <p>Top B2B Agency</p>
+                </div>
+                <div class="card fade-up" style="transition-delay: 0.3s;">
+                    <h3 style="margin-bottom: 0.5rem;">TrustPilot</h3>
+                    <p style="color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px;">★★★★★</p>
+                    <p>Excellent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                <div class="card fade-up">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"I was skeptical about 'guaranteed placement' because every other agency had failed me. Credence delivered exactly what they promised in 14 days. My personal brand is now my biggest asset."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=JK" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>Jonathan K.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">CEO, Vertex AI</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"The team understands the nuance of AEO. We aren't just ranking on Google anymore, we are showing up in ChatGPT answers. That is the future."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=SM" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>Sarah M.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">Founder, HealthFlow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-up">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"Best investment we made for our Series B fundraising round. Investors mentioned seeing our Forbes article during the due diligence process."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=MT" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>Mark T.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">Founder, Fintech.io</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"They cleaned up a PR mess that was haunting my search results for years. Within 60 days, the negative links were pushed to page 2."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=DR" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>David R.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">CTO, Enterprise Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 4rem;">
+                <a href="contact.html" class="btn btn-primary">Join Them</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-cols">
+                <div><h4>Credence.</h4><p>Democratizing authority.</p></div>
+                <div><h4>Company</h4><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+                <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Credence Media.</p></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
