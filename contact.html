@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Credence Media</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png"> 
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Credence.</a>
+            <ul class="nav-links">
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Our Work</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html" style="color: var(--text-main);">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <header class="hero">
+        <div class="container hero-content fade-up">
+            <h1>Start Your Campaign</h1>
+            <p>We work exclusively with founders and brands ready to scale. Fill out the application below.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container" style="max-width: 600px;">
+            <div class="card fade-up" style="border-top: 4px solid var(--accent);">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Full Name</label>
+                    <input type="text" name="name" placeholder="John Doe" required>
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Company Website</label>
+                    <input type="text" name="website" placeholder="company.com" required>
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Work Email</label>
+                    <input type="email" name="email" placeholder="john@company.com" required>
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Interested Plan</label>
+                    <select name="plan" id="plan-select">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Continuity">Continuity ($2.5k/mo)</option>
+                        <option value="Growth">Growth ($4.5k/mo)</option>
+                        <option value="Dominance">Dominance ($6.5k/mo)</option>
+                    </select>
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Tell us about your goals</label>
+                    <textarea name="message" rows="5" placeholder="I want to rank for..."></textarea>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
+                </form>
+            </div>
+            <p class="text-center" style="margin-top: 2rem; font-size: 0.9rem;">Usually respond within 24 hours.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2026 Credence Media.</p></div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Auto-select plan based on URL parameter (e.g., contact.html?plan=growth)
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+        if(plan) {
+            const select = document.getElementById('plan-select');
+            for(let i=0; i<select.options.length; i++){
+                if(select.options[i].value.toLowerCase().includes(plan.toLowerCase())){
+                    select.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
