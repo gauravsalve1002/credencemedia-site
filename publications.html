@@ -43,49 +43,156 @@
         </div>
     </header>
 
-    <section class="section">
+<section class="section">
         <div class="container">
-            <div class="grid-3">
-                <div class="card fade-up text-center">
-                    <h3 style="color: var(--accent);">Business & Finance</h3>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-                    <p>Forbes</p>
-                    <p>Bloomberg</p>
-                    <p>Yahoo Finance</p>
-                    <p>Business Insider</p>
-                    <p>Fortune</p>
-                    <p>Entrepreneur</p>
+            <div class="filter-container fade-up">
+                <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+                <button class="filter-btn" onclick="filterSelection('business')">Business & Finance</button>
+                <button class="filter-btn" onclick="filterSelection('tech')">Tech & Startup</button>
+                <button class="filter-btn" onclick="filterSelection('lifestyle')">Lifestyle & Fashion</button>
+                <button class="filter-btn" onclick="filterSelection('news')">Global News</button>
+            </div>
+
+            <div class="media-grid">
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/forbes.png" alt="Forbes">
+                    <span class="media-tag">Business</span>
+                </div>
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/bloomberg.png" alt="Bloomberg">
+                    <span class="media-tag">Finance</span>
+                </div>
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/yahoofinance.png" alt="Yahoo Finance">
+                    <span class="media-tag">Finance</span>
+                </div>
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/Business-Insider-Transparent.webp" alt="Business Insider">
+                    <span class="media-tag">Business</span>
+                </div>
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/Entrepreneur-Favicon.webp" alt="Entrepreneur">
+                    <span class="media-tag">Startup</span>
                 </div>
 
-                <div class="card fade-up text-center" style="transition-delay: 0.1s;">
-                    <h3 style="color: var(--accent);">Tech & Startup</h3>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-                    <p>TechCrunch</p>
-                    <p>VentureBeat</p>
-                    <p>Wired</p>
-                    <p>The Verge</p>
-                    <p>HackerNoon</p>
-                    <p>Gizmodo</p>
+                <div class="media-card fade-up" data-category="tech">
+                    <img src="assets/logo/techcrunch.png" alt="TechCrunch">
+                    <span class="media-tag">Tech</span>
+                </div>
+                <div class="media-card fade-up" data-category="tech">
+                    <img src="assets/logo/venturebeat.webp" alt="VentureBeat">
+                    <span class="media-tag">VC</span>
+                </div>
+                <div class="media-card fade-up" data-category="tech">
+                    <img src="assets/logo/Hackernoon-Favicon-Logo.webp" alt="HackerNoon">
+                    <span class="media-tag">Dev</span>
+                </div>
+                <div class="media-card fade-up" data-category="tech">
+                    <img src="assets/logo/Mashable-2.webp" alt="Mashable">
+                    <span class="media-tag">Digital</span>
+                </div>
+                <div class="media-card fade-up" data-category="tech">
+                    <img src="assets/logo/Tech-Bullion-Favicon-Logo.webp" alt="Tech Bullion">
+                    <span class="media-tag">FinTech</span>
                 </div>
 
-                <div class="card fade-up text-center" style="transition-delay: 0.2s;">
-                    <h3 style="color: var(--accent);">Global News</h3>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1rem 0;">
-                    <p>AP News</p>
-                    <p>Reuters</p>
-                    <p>USA Today</p>
-                    <p>Newsweek</p>
-                    <p>The Guardian</p>
-                    <p>Fox Business</p>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/GQ.webp" alt="GQ">
+                    <span class="media-tag">Men's</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Vogue-Logo-Favicon.webp" alt="Vogue">
+                    <span class="media-tag">Fashion</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Vanity-Fair-logo.webp" alt="Vanity Fair">
+                    <span class="media-tag">Culture</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Elle.webp" alt="Elle">
+                    <span class="media-tag">Fashion</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Harpers-Bazaar.webp" alt="Harper's Bazaar">
+                    <span class="media-tag">Luxury</span>
+                </div>
+
+                <div class="media-card fade-up" data-category="news">
+                    <img src="assets/logo/associated-press.webp" alt="AP News">
+                    <span class="media-tag">Global</span>
+                </div>
+                <div class="media-card fade-up" data-category="news">
+                    <img src="assets/logo/USA-Today.webp" alt="USA Today">
+                    <span class="media-tag">USA</span>
+                </div>
+                <div class="media-card fade-up" data-category="news">
+                    <img src="assets/logo/Daily-Mail-Favicon.webp" alt="Daily Mail">
+                    <span class="media-tag">UK</span>
+                </div>
+                <div class="media-card fade-up" data-category="news">
+                    <img src="assets/logo/Chicago_Tribune_logo-removebg-preview.webp" alt="Chicago Tribune">
+                    <span class="media-tag">Local</span>
+                </div>
+                <div class="media-card fade-up" data-category="news">
+                    <img src="assets/logo/Washington-Times-Favicon-Logo.webp" alt="Wash Times">
+                    <span class="media-tag">Politics</span>
+                </div>
+
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/Fast_Company_logo-removebg-preview-1.webp" alt="Fast Company">
+                    <span class="media-tag">Innovation</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Esquire-Favicon-Logo.webp" alt="Esquire">
+                    <span class="media-tag">Lifestyle</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Haute-Living.webp" alt="Haute Living">
+                    <span class="media-tag">Luxury</span>
+                </div>
+                <div class="media-card fade-up" data-category="business">
+                    <img src="assets/logo/Benzinga-Logo.webp" alt="Benzinga">
+                    <span class="media-tag">Crypto</span>
+                </div>
+                <div class="media-card fade-up" data-category="lifestyle">
+                    <img src="assets/logo/Rolling_Stone-removebg-preview.webp" alt="Rolling Stone">
+                    <span class="media-tag">Music</span>
                 </div>
             </div>
 
             <div class="text-center" style="margin-top: 4rem;">
-                <p>Looking for a specific outlet?</p>
-                <a href="contact.html" class="btn btn-primary">Request Full Media List</a>
+                <p>Looking for a specific outlet? We have 475+ more.</p>
+                <a href="contact.html" class="btn btn-primary">Request Full Inventory</a>
             </div>
         </div>
     </section>
+
+    <script>
+        function filterSelection(category) {
+            var x, i;
+            x = document.getElementsByClassName("media-card");
+            var btns = document.getElementsByClassName("filter-btn");
+
+            // 1. Update Buttons
+            for (i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+                if(event.target.innerHTML.toLowerCase().includes(category) || 
+                  (category === 'all' && btns[i].innerHTML === 'All')) {
+                    event.target.classList.add("active");
+                }
+            }
+            if(category === 'all') document.querySelector('.filter-btn').classList.add('active');
+
+            // 2. Filter Grid
+            if (category == "all") category = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; // Hide all
+                if (x[i].getAttribute("data-category").indexOf(category) > -1) {
+                    x[i].style.display = "flex"; // Show match
+                }
+            }
+        }
+    </script>
 
     <footer class="footer">
         <div class="container">
