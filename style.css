@@ -184,11 +184,11 @@ input:focus, textarea:focus { border-color: var(--accent); }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
 /* ==========================================================================
-   INFINITE LOGO SLIDER
+   INFINITE LOGO SLIDER (UPDATED: Big, Colorful & Fixed)
    ========================================================================== */
 .logo-slider-section {
-    background: #f8fafc; /* Very light grey background */
-    padding: 2rem 0;
+    background: #f8fafc;
+    padding: 3rem 0; /* Increased padding for bigger logos */
     border-bottom: 1px solid var(--border);
     overflow: hidden;
 }
@@ -198,49 +198,63 @@ input:focus, textarea:focus { border-color: var(--accent); }
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #94a3b8; /* Muted text color */
-    margin-bottom: 1.5rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
     font-weight: 600;
 }
 
 .logo-slider-track {
     display: flex;
     align-items: center;
-    width: calc(200px * 12); /* Width = (Slide Width * Number of Slides) */
-    animation: infiniteScroll 25s linear infinite;
+    /* IMPORTANT: Math = Slide Width (200px) * Total Slides (24)
+       If you have fewer logos, adjust the number 24.
+    */
+    width: calc(200px * 24); 
+    animation: infiniteScroll 40s linear infinite; /* Slower speed for better visibility */
 }
 
+/* THE CONTAINER BOX (Force Fit) */
 .logo-slide {
-    width: 200px; /* Fixed width for each logo container */
-    padding: 0 1.5rem;
+    width: 200px;        /* Fixed width per logo */
+    height: 100px;       /* Fixed height per logo (creates a consistent row) */
+    padding: 0 1.5rem;   
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* THE IMAGE (Big & Colorful) */
 .logo-slide img {
-    max-height: 40px; /* Constrain height */
+    max-width: 100%;     
+    max-height: 80px;    /* INCREASED SIZE (Was 40px) */
     width: auto;
-    opacity: 0.6; /* Slight transparency for "passive" look */
-    filter: grayscale(100%); /* Make logos black & white */
-    transition: 0.3s;
+    height: auto;
+    
+    object-fit: contain; /* Ensures logo fits inside without stretching */
+    
+    opacity: 1;          /* Full visibility */
+    filter: none;        /* Original Colors (No Grayscale) */
+    
+    transition: transform 0.3s;
 }
 
-/* Hover Effect: Bring color back on hover (Optional) */
+/* Optional: Pop effect on hover */
 .logo-slide img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
+    transform: scale(1.1);
 }
 
 @keyframes infiniteScroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-200px * 6)); } /* Move by half the total width */
+    100% { transform: translateX(calc(-200px * 12)); } /* Move by half the total slides (12) */
 }
 
 /* Mobile Adjustment */
 @media (max-width: 768px) {
     .logo-slider-track {
-        animation-duration: 15s; /* Faster on mobile */
+        animation-duration: 20s; 
+    }
+    .logo-slide img {
+        max-height: 60px; /* Slightly smaller on mobile to fit screen better */
     }
 }
 
@@ -268,3 +282,4 @@ input:focus, textarea:focus { border-color: var(--accent); }
     fill: #2563eb;            /* Change to Blue on Hover */
     transform: translateY(-3px); /* Float Up */
 }
+
