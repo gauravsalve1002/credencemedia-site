@@ -43,59 +43,119 @@
         </div>
     </header>
 
-    <section class="section">
-        <div class="container">
-            <div class="grid-3">
-                <div class="card fade-up">
-                    <h3>Continuity</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
-                        $2,500<span style="font-size: 1rem; color: #666; font-weight: 400;">/mo</span>
-                    </div>
-                    <p>For emerging leaders building a foundation.</p>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
-                    <ul style="margin-bottom: 2rem; list-style: none;">
-                        <li style="margin-bottom: 0.5rem;">✔ 1 Guaranteed Placement</li>
-                        <li style="margin-bottom: 0.5rem;">✔ Basic Knowledge Panel Audit</li>
-                        <li style="margin-bottom: 0.5rem;">✔ Monthly Authority Report</li>
-                    </ul>
-                    <a href="contact.html?plan=continuity" class="btn btn-outline" style="width: 100%; text-align: center;">Select Plan</a>
-                </div>
-
-                <div class="card fade-up" style="border-color: var(--accent); position: relative; transition-delay: 0.1s;">
-                    <div style="position: absolute; top: 0; right: 0; background: var(--accent); color: white; padding: 5px 15px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Most Popular</div>
-                    <h3 style="color: var(--accent);">Growth</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
-                        $4,500<span style="font-size: 1rem; color: #666; font-weight: 400;">/mo</span>
-                    </div>
-                    <p>For startups and scaling brands.</p>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
-                    <ul style="margin-bottom: 2rem; list-style: none;">
-                        <li style="margin-bottom: 0.5rem;">✔ <strong>2 Guaranteed Placements</strong></li>
-                        <li style="margin-bottom: 0.5rem;">✔ Knowledge Panel Verification</li>
-                        <li style="margin-bottom: 0.5rem;">✔ Yahoo Finance Feature</li>
-                        <li style="margin-bottom: 0.5rem;">✔ AEO Voice Search Opt.</li>
-                    </ul>
-                    <a href="contact.html?plan=growth" class="btn btn-primary" style="width: 100%; text-align: center;">Select Plan</a>
-                </div>
-
-                <div class="card fade-up" style="transition-delay: 0.2s;">
-                    <h3>Dominance</h3>
-                    <div style="font-size: 2.5rem; font-weight: 700; margin: 1rem 0;">
-                        $6,500<span style="font-size: 1rem; color: #666; font-weight: 400;">/mo</span>
-                    </div>
-                    <p>Total narrative control & crisis defense.</p>
-                    <hr style="border: 0; border-top: 1px solid #eee; margin: 1.5rem 0;">
-                    <ul style="margin-bottom: 2rem; list-style: none;">
-                        <li style="margin-bottom: 0.5rem;">✔ <strong>4 Guaranteed Placements</strong></li>
-                        <li style="margin-bottom: 0.5rem;">✔ Tier-1 Pitching (Forbes/Inc)</li>
-                        <li style="margin-bottom: 0.5rem;">✔ Crisis Management</li>
-                        <li style="margin-bottom: 0.5rem;">✔ Wikipedia Consultation</li>
-                    </ul>
-                    <a href="contact.html?plan=dominance" class="btn btn-outline" style="width: 100%; text-align: center;">Select Plan</a>
-                </div>
-            </div>
+<header class="hero">
+    <div class="container hero-content fade-up">
+        <h1>Transparent Investment.</h1>
+        <p>No hidden retainers. No vague promises. Choose the volume that fits your growth goals.</p>
+        
+        <div class="pricing-toggle">
+            <span class="toggle-label active" id="monthly-label">Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="billing-toggle" onclick="togglePricing()">
+                <span class="slider round"></span>
+            </label>
+            <span class="toggle-label" id="yearly-label">Yearly <span class="save-badge">SAVE 20%</span></span>
         </div>
-    </section>
+    </div>
+</header>
+
+<section class="section">
+    <div class="container">
+        <div class="grid-3 pricing-grid">
+            
+            <div class="card fade-up pricing-card">
+                <h3>Starter</h3>
+                <p class="plan-desc">Perfect for verifying outcomes.</p>
+                <div class="price-container">
+                    <div class="price monthly-price">$1,200<span class="period">/mo</span></div>
+                    <div class="price yearly-price hidden">$950<span class="period">/mo</span></div>
+                    <div class="billed-yearly hidden">Billed $11,400 yearly</div>
+                </div>
+                <hr>
+                <ul class="plan-features">
+                    <li><strong>1 Guaranteed Article</strong> / month</li>
+                    <li>SEO & AEO Optimization</li>
+                    <li>1 Do-Follow Backlink</li>
+                    <li>Professional Article Drafting</li>
+                    <li>Google News Indexing</li>
+                </ul>
+                <a href="contact.html?plan=starter" class="btn btn-outline full-width">Start Trial</a>
+            </div>
+
+            <div class="card fade-up pricing-card popular">
+                <div class="popular-tag">Most Popular</div>
+                <h3>Growth</h3>
+                <p class="plan-desc">For consistent authority building.</p>
+                <div class="price-container">
+                    <div class="price monthly-price">$2,200<span class="period">/mo</span></div>
+                    <div class="price yearly-price hidden">$1,750<span class="period">/mo</span></div>
+                    <div class="billed-yearly hidden">Billed $21,000 yearly</div>
+                </div>
+                <hr>
+                <ul class="plan-features">
+                    <li><strong>2 Guaranteed Articles</strong> / month</li>
+                    <li><strong>Syndication Network Access</strong></li>
+                    <li>SEO, AEO & GEO Optimization</li>
+                    <li>2 Do-Follow Backlinks</li>
+                    <li>Premium Article Drafting</li>
+                    <li>Monthly Authority Report</li>
+                </ul>
+                <a href="contact.html?plan=growth" class="btn btn-primary full-width">Get Started</a>
+            </div>
+
+            <div class="card fade-up pricing-card">
+                <h3>Dominance</h3>
+                <p class="plan-desc">Aggressive market leadership.</p>
+                <div class="price-container">
+                    <div class="price monthly-price">$3,000<span class="period">/mo</span></div>
+                    <div class="price yearly-price hidden">$2,400<span class="period">/mo</span></div>
+                    <div class="billed-yearly hidden">Billed $28,800 yearly</div>
+                </div>
+                <hr>
+                <ul class="plan-features">
+                    <li><strong>3 Guaranteed Articles</strong> / month</li>
+                    <li><strong>Knowledge Panel Support</strong></li>
+                    <li>Advanced GEO (AI) Training</li>
+                    <li>3 Do-Follow Backlinks</li>
+                    <li>Executive Drafting Team</li>
+                    <li>Crisis Management Support</li>
+                </ul>
+                <a href="contact.html?plan=dominance" class="btn btn-outline full-width">Select Plan</a>
+            </div>
+
+        </div>
+
+        <div class="text-center" style="margin-top: 4rem; color: #666; font-size: 0.9rem;">
+            <p>* All plans include a 100% money-back guarantee if placement is not secured.<br>
+            specific publications are selected based on your niche during onboarding.</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function togglePricing() {
+        const toggle = document.getElementById('billing-toggle');
+        const monthlyPrices = document.querySelectorAll('.monthly-price');
+        const yearlyPrices = document.querySelectorAll('.yearly-price');
+        const billedYearlyText = document.querySelectorAll('.billed-yearly');
+        
+        if (toggle.checked) {
+            // YEARLY VIEW
+            monthlyPrices.forEach(el => el.style.display = 'none');
+            yearlyPrices.forEach(el => el.style.display = 'block');
+            billedYearlyText.forEach(el => el.style.display = 'block');
+            document.getElementById('yearly-label').classList.add('active');
+            document.getElementById('monthly-label').classList.remove('active');
+        } else {
+            // MONTHLY VIEW
+            monthlyPrices.forEach(el => el.style.display = 'block');
+            yearlyPrices.forEach(el => el.style.display = 'none');
+            billedYearlyText.forEach(el => el.style.display = 'none');
+            document.getElementById('monthly-label').classList.add('active');
+            document.getElementById('yearly-label').classList.remove('active');
+        }
+    }
+</script>
 
     <section class="section bg-alt">
         <div class="container" style="max-width: 800px;">
