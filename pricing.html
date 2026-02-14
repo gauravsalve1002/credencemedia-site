@@ -19,6 +19,110 @@
     <meta property="og:url" content="https://credencemedia.co/pricing.html">
     <meta property="og:type" content="product">
 
+    <style>
+        /* 1. PREVENT BLANK PAGE (Overrides animation hiding) */
+        .fade-up {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        /* 2. PRICING TOGGLE STYLES */
+        .pricing-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            font-weight: 600;
+        }
+        .toggle-label { color: #94a3b8; transition: 0.3s; }
+        .toggle-label.active { color: #0f172a; } /* Dark color for active */
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider { background-color: #2563eb; } /* Blue accent */
+        input:checked + .slider:before { transform: translateX(24px); }
+        .save-badge {
+            background: #dcfce7;
+            color: #166534;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+
+        /* 3. PRICING CARD STYLES */
+        .pricing-card {
+            position: relative;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            background: white;
+        }
+        .pricing-card.popular {
+            border-color: #2563eb;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .popular-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #2563eb;
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 1rem 0 0.5rem 0;
+            color: #0f172a;
+        }
+        .period { font-size: 1rem; color: #666; font-weight: 400; }
+        .billed-yearly { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem; }
+        .hidden { display: none; }
+        .full-width { width: 100%; text-align: center; display: block; }
+        
+        .plan-features li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+            list-style: none;
+        }
+        .plan-features li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+        }
+    </style>
+
     <script type="application/ld+json">
     [
         {
@@ -84,7 +188,7 @@
     </div>
 
     <header class="hero">
-        <div class="container hero-content fade-up">
+        <div class="container hero-content">
             <h1>Transparent Investment.</h1>
             <p>No hidden retainers. No vague promises. Choose the volume that fits your growth goals.</p>
             
@@ -103,7 +207,7 @@
         <div class="container">
             <div class="grid-3 pricing-grid">
                 
-                <div class="card fade-up pricing-card">
+                <div class="card pricing-card">
                     <h3>Starter</h3>
                     <p class="plan-desc">Perfect for establishing credibility.</p>
                     <div class="price-container">
@@ -113,7 +217,7 @@
                     </div>
                     <hr>
                     <ul class="plan-features">
-                        <li style="color: var(--text-main); font-weight: 700;">1 Guaranteed Article / mo</li>
+                        <li style="color: #0f172a; font-weight: 700;">1 Guaranteed Article / mo</li>
                         <li><strong>Instant Trust & Credibility</strong></li>
                         <li>Add “As seen on” to your website</li>
                         <li>Use logos on website & socials</li>
@@ -126,7 +230,7 @@
                     <a href="contact.html?plan=starter" class="btn btn-outline full-width">Start Trial</a>
                 </div>
 
-                <div class="card fade-up pricing-card popular">
+                <div class="card pricing-card popular">
                     <div class="popular-tag">Most Popular</div>
                     <h3>Growth</h3>
                     <p class="plan-desc">For consistent authority building.</p>
@@ -137,7 +241,7 @@
                     </div>
                     <hr>
                     <ul class="plan-features">
-                        <li style="color: var(--accent); font-weight: 700;">2 Guaranteed Articles / mo</li>
+                        <li style="color: #2563eb; font-weight: 700;">2 Guaranteed Articles / mo</li>
                         <li><strong>Instant Trust & Credibility</strong></li>
                         <li>Add “As seen on” to your website</li>
                         <li>Use logos on website & socials</li>
@@ -150,7 +254,7 @@
                     <a href="contact.html?plan=growth" class="btn btn-primary full-width">Get Started</a>
                 </div>
 
-                <div class="card fade-up pricing-card">
+                <div class="card pricing-card">
                     <h3>Dominance</h3>
                     <p class="plan-desc">Aggressive market leadership.</p>
                     <div class="price-container">
@@ -160,7 +264,7 @@
                     </div>
                     <hr>
                     <ul class="plan-features">
-                        <li style="color: var(--text-main); font-weight: 700;">3 Guaranteed Articles / mo</li>
+                        <li style="color: #0f172a; font-weight: 700;">3 Guaranteed Articles / mo</li>
                         <li><strong>Instant Trust & Credibility</strong></li>
                         <li>Add “As seen on” to your website</li>
                         <li>Use logos on website & socials</li>
@@ -209,12 +313,12 @@
 
     <section class="section" style="background-color: #f8fafc;">
         <div class="container" style="max-width: 800px;">
-            <div class="section-title fade-up">
+            <div class="section-title">
                 <h2>Pricing Questions</h2>
                 <p>Everything you need to know before investing.</p>
             </div>
 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     What happens if you fail to place my article?
                     <span class="faq-icon">+</span>
@@ -224,7 +328,7 @@
                 </div>
             </div>
 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     Are Forbes or Bloomberg included in the standard plans?
                     <span class="faq-icon">+</span>
@@ -235,7 +339,7 @@
                 </div>
             </div>      
                 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     Do I need to write the articles myself?
                     <span class="faq-icon">+</span>
@@ -245,7 +349,7 @@
                 </div>
             </div>
 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     Can I choose exactly which publication I want?
                     <span class="faq-icon">+</span>
@@ -255,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     Is there a long-term contract?
                     <span class="faq-icon">+</span>
@@ -265,7 +369,7 @@
                 </div>
             </div>
 
-            <div class="faq-item fade-up">
+            <div class="faq-item">
                 <div class="faq-question">
                     What is AEO & GEO optimization?
                     <span class="faq-icon">+</span>
@@ -293,4 +397,34 @@
                             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
                         <a href="https://www.instagram.com/credence.mediagroup/" target="_blank" aria-label="Instagram">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="why-us.html">Why Choose Us</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <a href="publications.html">Publications</a>
+                    <a href="work.html">Our Work</a>
+                    <a href="reviews.html">Reviews</a>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Credence Media Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
