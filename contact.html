@@ -3,24 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Credence Media</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png"> 
+    
+    <title>Contact Credence Media | Start Your Authority Campaign</title>
+    <meta name="description" content="Apply for guaranteed media placement. We work exclusively with founders and brands ready to scale. Fill out the application to start your authority engineering.">
+    <meta name="keywords" content="hire pr agency, contact credence media, media placement application, reputation management consultation, buy forbes feature">
+    
+    <link rel="canonical" href="https://credencemedia.co/contact.html">
+    
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png"> 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Start Your Campaign | Credence Media">
+    <meta property="og:description" content="We democratize authority. Apply now to secure guaranteed placement in top-tier publications.">
+    <meta property="og:image" content="assets/logo/credence-media-logo.jpg">
+    <meta property="og:url" content="https://credencemedia.co/contact.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Credence Media Group",
+        "url": "https://credencemedia.co",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "email": "info@credencemedia.co",
+          "areaServed": "Global",
+          "availableLanguage": "English"
+        }
+      },
+      "description": "Application form for guaranteed media placement and authority engineering services."
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="/#" class="logo">Credence.</a>
+            <a href="index.html" class="logo">Credence.</a>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Our Work</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="/#faq">FAQ</a></li>
-                <li><a href="contact.html"style="color: var(--text-main)">Contact</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+                <li><a href="contact.html" style="color: var(--text-main)">Contact</a></li>
             </ul>
             <button class="mobile-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
         </div>
@@ -46,31 +78,61 @@
     <section class="section">
         <div class="container" style="max-width: 600px;">
             <div class="card fade-up" style="border-top: 4px solid var(--accent);">
+                
                 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Full Name</label>
+                    
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <input type="hidden" name="_subject" value="New Campaign Application - Credence Media">
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Full Name *</label>
                     <input type="text" name="name" placeholder="John Doe" required>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0;">
+                        <div>
+                            <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Work Email *</label>
+                            <input type="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div>
+                            <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Phone / WhatsApp *</label>
+                            <input type="tel" name="phone" placeholder="+1 (555) 000-0000" required>
+                        </div>
+                    </div>
 
                     <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Company Website</label>
                     <input type="text" name="website" placeholder="company.com" required>
 
-                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Work Email</label>
-                    <input type="email" name="email" placeholder="john@company.com" required>
-
                     <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Interested Plan</label>
-                    <select name="plan" id="plan-select">
+                    <select name="plan" id="plan-select" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 1rem;">
                         <option value="General Inquiry">General Inquiry</option>
-                        <option value="Continuity">Continuity ($2.5k/mo)</option>
-                        <option value="Growth">Growth ($4.5k/mo)</option>
-                        <option value="Dominance">Dominance ($6.5k/mo)</option>
+                        <option value="Starter">Starter ($1,950/mo)</option>
+                        <option value="Growth">Growth ($3,800/mo)</option>
+                        <option value="Dominance">Dominance ($5,800/mo)</option>
+                        <option value="Tier-1 Audit">Tier-1 Audit (Forbes/Bloomberg)</option>
                     </select>
 
-                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Tell us about your goals</label>
-                    <textarea name="message" rows="5" placeholder="I want to rank for..."></textarea>
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">When are you looking to start? *</label>
+                    <select name="timeline" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 1rem;" required>
+                        <option value="Immediately">Immediately</option>
+                        <option value="1-2 Weeks">Within 1-2 Weeks</option>
+                        <option value="1 Month">Next Month</option>
+                        <option value="Exploratory">Just Exploring</option>
+                    </select>
+
+                    <label style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">What are your core goals/expectations? *</label>
+                    <textarea name="expectations" rows="3" placeholder="I want to rank for 'Tech CEO' and verify my Knowledge Panel..." required></textarea>
+
+                    <div style="display: flex; align-items: start; gap: 10px; margin-bottom: 1.5rem; margin-top: 1rem;">
+                        <input type="checkbox" name="consent" id="consent" required style="width: auto; margin-top: 4px;">
+                        <label for="consent" style="font-size: 0.85rem; color: #666; font-weight: 400;">
+                            I consent to having the Credence Media team reach out to me via email or phone. I understand I may receive updates regarding my application.
+                        </label>
+                    </div>
 
                     <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
                 </form>
             </div>
-            <p class="text-center" style="margin-top: 2rem; font-size: 0.9rem;">Usually respond within 24 hours.</p>
+            <p class="text-center" style="margin-top: 2rem; font-size: 0.9rem; color: #666;">We typically respond within 24 hours to qualified applicants.</p>
         </div>
     </section>
 
@@ -89,7 +151,7 @@
                             <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         </a>
                         <a href="https://www.instagram.com/credence.mediagroup/" target="_blank" aria-label="Instagram">
-                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -120,12 +182,13 @@
     
     <script src="script.js"></script>
     <script>
-        // Auto-select plan based on URL parameter (e.g., contact.html?plan=growth)
+        // Auto-select plan based on URL parameter (e.g., contact.html?plan=starter)
         const urlParams = new URLSearchParams(window.location.search);
         const plan = urlParams.get('plan');
         if(plan) {
             const select = document.getElementById('plan-select');
             for(let i=0; i<select.options.length; i++){
+                // Check if the dropdown option text or value matches the URL parameter
                 if(select.options[i].value.toLowerCase().includes(plan.toLowerCase())){
                     select.selectedIndex = i;
                     break;
