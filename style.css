@@ -509,21 +509,3 @@ input:checked + .slider:before { transform: translateX(24px); }
     display: none;
 }
 
-/* Add this to style.css if it's missing */
-.popular-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--accent);
-    color: white;
-    padding: 5px 15px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* Ensures the card has relative positioning for the tag to stick to the corner */
-.pricing-card {
-    position: relative; 
-    /* ... other existing styles ... */
-}
