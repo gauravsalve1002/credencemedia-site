@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
    <url>
-      <loc>https://credencemedia.co/index.html</loc>
-      <lastmod>2024-01-30</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://credencemedia.co/framework.html</loc>
-      <lastmod>2024-01-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
+      <loc>https://credencemedia.co/</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>1.00</priority>
    </url>
    <url>
       <loc>https://credencemedia.co/pricing.html</loc>
-      <lastmod>2024-01-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-   </url>
-   <url>
-      <loc>https://credencemedia.co/about.html</loc>
-      <lastmod>2024-01-30</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.90</priority>
    </url>
    <url>
       <loc>https://credencemedia.co/contact.html</loc>
-      <lastmod>2024-01-30</lastmod>
-      <changefreq>yearly</changefreq>
-      <priority>0.7</priority>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.90</priority>
    </url>
+   <url>
+      <loc>https://credencemedia.co/publications.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://credencemedia.co/why-us.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <url>
+      <loc>https://credencemedia.co/case-studies.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://credencemedia.co/reviews.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+   <url>
+      <loc>https://credencemedia.co/about.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.80</priority>
+   </url>
+
+   <url>
+      <loc>https://credencemedia.co/careers.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.60</priority>
+   </url>
+   <url>
+      <loc>https://credencemedia.co/privacy.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.50</priority>
+   </url>
+   <url>
+      <loc>https://credencemedia.co/terms.html</loc>
+      <lastmod>2026-02-14</lastmod>
+      <priority>0.50</priority>
+   </url>
+
 </urlset>
