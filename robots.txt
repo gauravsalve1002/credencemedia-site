@@ -1,3 +1,12 @@
 User-agent: *
 Allow: /
+
+# Help Google find your pages
 Sitemap: https://credencemedia.co/sitemap.xml
+
+# Explicitly allow AI bots so they can "learn" your brand for GEO
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
