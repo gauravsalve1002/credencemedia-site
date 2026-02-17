@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Contact Credence Media | Start Your Authority Campaign</title>
-    <meta name="description" content="Apply for guaranteed media placement. We work exclusively with founders and brands ready to scale. Fill out the application to start your authority engineering.">
+    
+    <meta name="description" content="Ready to build your authority? Contact Credence Media for guaranteed PR placement. Apply now to secure your spot in our exclusive client roster.">
     <meta name="keywords" content="hire pr agency, contact credence media, media placement application, reputation management consultation, buy forbes feature">
     
-    <link rel="canonical" href="https://credencemedia.co/contact.html">
-    
     <link rel="icon" type="image/png" href="assets/logo/favicon.png"> 
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://credencemedia.co/contact.html">
 
     <meta property="og:title" content="Start Your Campaign | Credence Media">
     <meta property="og:description" content="We democratize authority. Apply now to secure guaranteed placement in top-tier publications.">
@@ -170,8 +171,8 @@
                 </div>
                 <div>
                     <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
+                    <a href="legal.html" onclick="showPolicy('privacy'); return false;">Privacy Policy</a>
+                    <a href="legal.html" onclick="showPolicy('terms'); return false;">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -182,13 +183,12 @@
     
     <script src="script.js"></script>
     <script>
-        // Auto-select plan based on URL parameter (e.g., contact.html?plan=starter)
+        // Auto-select plan based on URL parameter (e.g., contact.html?plan=growth)
         const urlParams = new URLSearchParams(window.location.search);
         const plan = urlParams.get('plan');
         if(plan) {
             const select = document.getElementById('plan-select');
             for(let i=0; i<select.options.length; i++){
-                // Check if the dropdown option text or value matches the URL parameter
                 if(select.options[i].value.toLowerCase().includes(plan.toLowerCase())){
                     select.selectedIndex = i;
                     break;
