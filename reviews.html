@@ -3,23 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews | Credence Media</title>
+    
+    <title>Client Reviews & Testimonials | Credence Media Group</title>
+    
+    <meta name="description" content="Read unfiltered reviews from founders, CEOs, and investors who used Credence Media for guaranteed PR placement and reputation engineering.">
+    <meta name="keywords" content="credence media reviews, pr agency testimonials, guaranteed pr reviews, reputation management case studies, client feedback">
+    
     <link rel="icon" type="image/png" href="assets/logo/favicon.png"> 
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://credencemedia.co/reviews.html">
+
+    <meta property="og:title" content="Credence Media Reviews | 5-Star Feedback">
+    <meta property="og:description" content="See why founders trust us with their reputation.">
+    <meta property="og:image" content="assets/logo/credence-media-logo.jpg">
+    <meta property="og:url" content="https://credencemedia.co/reviews.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Credence Media Authority Services",
+      "image": "https://credencemedia.co/assets/logo/credence-media-logo.jpg",
+      "description": "Guaranteed media placement and reputation management services.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Credence Media Group"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "124",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Jonathan K." },
+          "datePublished": "2025-11-15",
+          "reviewBody": "Credence delivered exactly what they promised in 14 days. My personal brand is now my biggest asset.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Sarah M." },
+          "datePublished": "2025-10-22",
+          "reviewBody": "Finally, a PR firm that understands SEO and AI. We aren't just ranking on Google anymore, we are showing up in ChatGPT answers.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="/#" class="logo">Credence.</a>
+            <a href="index.html" class="logo">Credence.</a>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="work.html">Our Work</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="reviews.html"style="color: var(--text-main)">Reviews</a></li>
-                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="reviews.html" style="color: var(--text-main)">Reviews</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <button class="mobile-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></button>
@@ -73,6 +129,7 @@
     <section class="section">
         <div class="container">
             <div class="grid-2" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                
                 <div class="card fade-up">
                     <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"I was skeptical about 'guaranteed placement' because every other agency had failed me. Credence delivered exactly what they promised in 14 days. My personal brand is now my biggest asset."</p>
                     <div style="display: flex; align-items: center; gap: 1rem;">
@@ -116,6 +173,29 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="card fade-up">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"We tried 3 different agencies before Credence. All of them sent 'pitches' and got zero results. Credence just published the article. Done."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=EL" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>Elena L.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">VP Marketing, CloudScale</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-up" style="transition-delay: 0.1s;">
+                    <p style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem;">"The 'Dominance' plan is worth every penny. Getting verified on Google changed how clients perceive us instantly."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <img src="https://placehold.co/50x50/e2e8f0/64748b?text=AP" style="border-radius: 50%; width: 50px; height: 50px;" alt="User">
+                        <div>
+                            <strong>Alex P.</strong>
+                            <p style="margin: 0; font-size: 0.85rem;">Founder, Stealth Startup</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             
             <div class="text-center" style="margin-top: 4rem;">
@@ -158,8 +238,8 @@
                 </div>
                 <div>
                     <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
+                    <a href="legal.html" onclick="showPolicy('privacy'); return false;">Privacy Policy</a>
+                    <a href="legal.html" onclick="showPolicy('terms'); return false;">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -167,6 +247,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
