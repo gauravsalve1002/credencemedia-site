@@ -1,12 +1,35 @@
 User-agent: *
 Allow: /
 
-# Help Google find your pages
-Sitemap: https://credencemedia.co/sitemap.xml
+# ---------------------------------------------------
+# GEO OPTIMIZATION: EXPLICITLY ALLOW AI TRAINING BOTS
+# ---------------------------------------------------
+# We WANT these bots to scrape the site so Credence Media
+# becomes part of their training data (Knowledge Graph).
 
-# Explicitly allow AI bots so they can "learn" your brand for GEO
+# ChatGPT (OpenAI)
 User-agent: GPTBot
 Allow: /
 
+# Gemini / Bard (Google AI)
 User-agent: Google-Extended
 Allow: /
+
+# Claude (Anthropic)
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Common Crawl (Used by many LLMs for training)
+User-agent: CCBot
+Allow: /
+
+# Perplexity AI (Answer Engine)
+User-agent: PerplexityBot
+Allow: /
+
+# ---------------------------------------------------
+# SITEMAP LOCATION
+# ---------------------------------------------------
+Sitemap: https://credencemedia.co/sitemap.xml
