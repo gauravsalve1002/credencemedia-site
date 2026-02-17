@@ -5,123 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Pricing | Guaranteed Media Placement</title>
-    <meta name="description" content="Transparent PR pricing. Starter plans begin at $1,950/mo with guaranteed article placement. Save 20% on yearly plans. Includes SEO, AEO, and Backlinks.">
-    <meta name="keywords" content="pr agency pricing, media placement cost, buy press release packages, guaranteed pr rates, seo pr packages">
+    <title>PR Pricing & Packages | Guaranteed Media Placement from $1,950/mo</title>
+    
+    <meta name="description" content="Transparent PR pricing. No retainers. Starter plans begin at $1,950/mo with guaranteed article placement. Save 20% on yearly plans. Includes SEO, AEO, and Backlinks.">
+    <meta name="keywords" content="pr agency pricing, media placement cost, buy press release packages, guaranteed pr rates, seo pr packages, reputation management cost">
     
     <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://credencemedia.co/pricing.html">
 
     <meta property="og:title" content="Credence Media Pricing | Plans Start at $1,950/mo">
     <meta property="og:description" content="No hidden retainers. Pay for results. 100% Money-Back Guarantee on all media placement plans.">
     <meta property="og:image" content="assets/logo/credence-media-logo.jpg">
     <meta property="og:url" content="https://credencemedia.co/pricing.html">
     <meta property="og:type" content="product">
-
-    <style>
-        /* 1. PREVENT BLANK PAGE (Overrides animation hiding) */
-        .fade-up {
-            opacity: 1 !important;
-            transform: none !important;
-        }
-
-        /* 2. PRICING TOGGLE STYLES */
-        .pricing-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            font-weight: 600;
-        }
-        .toggle-label { color: #94a3b8; transition: 0.3s; }
-        .toggle-label.active { color: #0f172a; } /* Dark color for active */
-        
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 26px;
-        }
-        .switch input { opacity: 0; width: 0; height: 0; }
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .slider { background-color: #2563eb; } /* Blue accent */
-        input:checked + .slider:before { transform: translateX(24px); }
-        .save-badge {
-            background: #dcfce7;
-            color: #166534;
-            font-size: 0.7rem;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        /* 3. PRICING CARD STYLES */
-        .pricing-card {
-            position: relative;
-            padding: 2rem;
-            border: 1px solid #e2e8f0;
-            background: white;
-        }
-        .pricing-card.popular {
-            border-color: #2563eb;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .popular-tag {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: #2563eb;
-            color: white;
-            padding: 5px 15px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 1rem 0 0.5rem 0;
-            color: #0f172a;
-        }
-        .period { font-size: 1rem; color: #666; font-weight: 400; }
-        .billed-yearly { font-size: 0.8rem; color: #94a3b8; margin-bottom: 1rem; }
-        .hidden { display: none; }
-        .full-width { width: 100%; text-align: center; display: block; }
-        
-        .plan-features li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 1.5rem;
-            list-style: none;
-        }
-        .plan-features li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #2563eb;
-        }
-    </style>
 
     <script type="application/ld+json">
     [
@@ -131,6 +30,7 @@
           "priceCurrency": "USD",
           "minPrice": "1950",
           "maxPrice": "5800",
+          "description": "Guaranteed Media Placement Packages including SEO and AEO optimization.",
           "provider": { "@type": "Organization", "name": "Credence Media Group" }
         },
         {
@@ -416,8 +316,8 @@
                 </div>
                 <div>
                     <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
+                    <a href="legal.html" onclick="showPolicy('privacy'); return false;">Privacy Policy</a>
+                    <a href="legal.html" onclick="showPolicy('terms'); return false;">Terms of Service</a>
                 </div>
             </div>
             <div class="footer-bottom">
